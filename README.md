@@ -7,7 +7,7 @@ life and helps you stay motivated. It provides affirmations based on your achiev
 
 Tech Stack Used:
 - Frontend: HTML, CSS, JavaScript
-- Backend: Flask, Gemini 1.5 LLM 
+- Backend: Flask, Gemini 1.5 LLM, LangChain, ChromaDB, Google Calendar API, Gmail API
 
 Installation instructions: 
 - 
