@@ -1,4 +1,3 @@
-/* Basic styles to make the chat input stick to the bottom */
 body, html {
   height: 100%;
   margin: 0;
@@ -27,19 +26,25 @@ body, html {
 .logo-img {
   height: 50px; 
   width: auto; 
-  border-radius: 25%;
+  border-radius: 40%;
   margin-right: 10px;
 }
 
+.logo-text{
+  font-size: 20px;
+  font-weight: bold;
+  color: #3a2020;
+}
+
 nav ul {
-  display: flex; /* Display list items in a row */
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  display: flex; 
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 nav li {
-  margin-right: 20px; /* Space between the menu items */
+  margin-right: 20px; 
 }
 
 nav a {
@@ -75,38 +80,95 @@ nav a:hover {
   border-top: #0332432f 1px solid;
   border-bottom: #a069e4 2px solid;
 }
-/* .timeline-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  margin: 20px 0; 
+ 
+.timeline-container {
+  margin: 10px auto;
+  padding: 10px;
+  width: 30%;
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: 0 10 10px grey;
+  text-align: center;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
-/* Timeline image styles */
-/* .timeline-image {
-  width: 30%; 
-  max-width: 800px; 
-  height: auto; 
-  margin-bottom: 20px; 
-} */ 
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
 
-/* Typing text container */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc; 
+}
+
+.timeline-node {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+} 
+
+.timeline-node .label {
+  margin-top: -12px;
+  font-size: 14px;
+  color: black;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.timeline-node.new {
+  animation: slideIn 0.5s ease-in-out;
+} 
+
 .typing-container {
   text-align: center;
   margin-top: 40px;
   font-size: 24px;
   font-family: 'sans-serif';
-  color: grey;
 }
 
-  /* Main chat area to take up available space */
+.timeline-button {
+  padding: 10px;
+  width: 150px;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.event-input {
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.event-input-button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
 .chat-container {
   flex-grow: 1;
   overflow-y: auto;
   padding: 20px;
 }
 
-/* The text entry box*/
 .chat-log {
   border: 1px solid #ccc;
   padding: 10px;
@@ -114,10 +176,10 @@ nav a:hover {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  scroll-behavior: smooth; /* Smooth scroll - automatically to the latest message */
+  scroll-behavior: smooth;
+  position: sticky;
 }
   
-/* Chat input bar - sticky to the bottom */
 .chat-input {
   display: flex;
   padding: 10px;
@@ -195,26 +257,26 @@ button:focus {
 
 /* User message styles */
 .user-message {
-  align-self: flex-start; /* Align user messages to the left */
-  background-color: #d1e7dd; /* Light green background for user messages */
+  align-self: flex-start; 
+  background-color: #d1e7dd; 
   color: black;
   padding: 10px;
   margin: 5px 0;
   border-radius: 10px;
-  max-width: 60%; /* Limit the width of user messages */
+  max-width: 60%; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   }
 
 /* System message styles */
 .system-message {
-  align-self: flex-end; /* Align system messages to the right */
-  background-color: #cfe2ff; /* Light blue background for system messages */
+  align-self: flex-end; 
+  background-color: #cfe2ff; 
   color: black;
   padding: 10px;
   margin: 5px 0;
   border-radius: 10px;
-  max-width: 60%; /* Limit the width of system messages */
+  max-width: 60%; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
