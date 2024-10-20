@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Project</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script> 
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo" class="logo-img">
+      </div>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Achievements</a></li>
+      </ul>
+    </div>
+    <button class="signin">Sign In</button>
+</nav>
+
+
+
+<!-- <div class="timeline-container">
+    <img src="timeline.png" alt="Timeline" class="timeline-image"> 
+    <h2 id="typing-text"></h2> 
+  </div> -->
+
+<!-- Section for typing effect text -->
+<div class="typing-container">
+    <h2 id="typing-text"></h2> 
+</div>
+
+  <!-- Chat area (for displaying messages) -->
+<div class="chat-container">
+    <div class="chat-log" id="chat-log">
+      <!-- Placeholder for chat history -->
+    </div>
+</div>
+
+<!-- Chat input bar at the bottom -->
+<div class="chat-input">
+    <input type="text" id="user-input" placeholder="Share your thoughts here...">
+    <button class="button" onclick="sendMessage()">Send</button>
+</div>
+
+<!-- Contribute button and affirmation text -->
+<button class="affirm-button" onclick="showAffirmation()">Affirmation</button>
+<div class="affirmation" id="affirmation-text"></div>
+
+</body>
+</html>
