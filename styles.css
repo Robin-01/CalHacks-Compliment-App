@@ -40,7 +40,7 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: #333;
   text-decoration: none;
   margin-right: 20px;
   font-size: medium;
@@ -60,8 +60,8 @@ nav a:hover {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-color: blueviolet;
-  background: linear-gradient(to right, #a49eb5 0%, #c5a7eb 100%);
-  /* box-shadow: 5px 2px 10px grey; */
+  border: 1px solid black;
+  background: linear-gradient(to right, #bedce4 0%, #c8b2e5 100%);
   cursor: pointer;
 }
 
@@ -145,18 +145,29 @@ nav a:hover {
   border-radius: 50px;
 }
 
+button:focus {
+    outline: 1px solid blueviolet;
+    outline-offset: 2px;
+}
+
 /* Affirmation and Contribute Button */
 .affirm-button {
   margin: 20px;
   padding: 10px 20px;
   background-color: #784caf;
-  color: white;
+  color: #333;
+  font-family: 'sans-serif';
+  font-weight: bold;
   border: none;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
-  background: linear-gradient(to right, #7a4caf 0%, #CBC3E3 100%)
+  background: linear-gradient(to right,#8cceee 0%, #b8a7ed 100%)
 }
+
+.affirm-button:active {
+    transform: scale(0.95);
+  }
   
 .affirmation {
   margin: 20px;
@@ -184,7 +195,9 @@ nav a:hover {
   margin: 5px 0;
   border-radius: 10px;
   max-width: 60%; /* Limit the width of user messages */
-}
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  }
 
 /* System message styles */
 .system-message {
@@ -195,4 +208,11 @@ nav a:hover {
   margin: 5px 0;
   border-radius: 10px;
   max-width: 60%; /* Limit the width of system messages */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.user-message:hover, .system-message:hover {
+  transform: translateY(-2px); /* Subtle pop effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
